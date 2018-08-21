@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { LabelComponent } from './label/label.component';
 import { ButtonComponent } from './button/button.component';
+import { CalculatorService } from './calculator.service';
+import { KeyService } from './key.service';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,7 @@ import { ButtonComponent } from './button/button.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [CalculatorService, KeyService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

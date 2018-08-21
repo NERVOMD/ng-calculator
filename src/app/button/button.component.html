@@ -1,17 +1,17 @@
 
 <div class="number-box">
-  <button *ngFor="let clear of element.clear">
+  <button (click)="clearValue(clear)" *ngFor="let clear of element.clear">
     {{clear}}
   </button>
-  <button (click)="writeInLabel('number')" *ngFor="let number of element.numbers">
+  <button (click)="sendValue(number)" *ngFor="let number of element.numbers">
     {{number}}
   </button>
-  <button *ngFor="let other of element.other">
+  <button (click)="sendValue(other)" *ngFor="let other of element.other">
     {{other}}
   </button>
 </div>
 <div class="operator-box">
-  <button *ngFor="let operator of element.operators">
+  <button (click)="sendOperator(operator)" *ngFor="let operator of element.operators">
     {{operator}}
   </button>
 </div>

@@ -13,6 +13,11 @@
   font-size: 16px;
   color: #D1D3D5;
 }
+.label-box .primary-value:focus,
+.label-box .secondary-value:focus {
+  outline: none;
+  border: none;
+}
 .label-box .primary-value {
   font-size: 30px;
   color: #484F54;
