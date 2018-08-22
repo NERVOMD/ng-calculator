@@ -7,7 +7,7 @@ import {BehaviorSubject} from 'rxjs';
 export class CalculatorService {
 
   number = '0';
-  secondNumber = '';
+  secondNumber = '0';
   operatorTruth = '';
   lastPress = '';
 
@@ -82,7 +82,7 @@ export class CalculatorService {
       if (this.operatorTruth === '*') {
         this.number = (parseFloat(this.secondNumber) * parseFloat(this.number)).toString();
       }
-      this.secondNumber = '';
+      this.secondNumber = '0';
       this.operatorTruth = '';
       this.lastPress = '=';
       this.editNumber1(this.number);
@@ -92,7 +92,7 @@ export class CalculatorService {
 
   clearValue(value) {
     if (value === 'C') {
-      this.secondNumber = '';
+      this.secondNumber = '0';
       this.number = '0';
       this.operatorTruth = '';
     } else if (value === 'CE') {
